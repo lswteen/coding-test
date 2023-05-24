@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "jwt.token",
+      "type": "com.illuminarean.example.config.properties.JwtTokenProperty",
+      "sourceType": "com.illuminarean.example.config.properties.JwtTokenProperty"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.token.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.illuminarean.example.config.properties.JwtTokenProperty",
+      "defaultValue": "secret"
+    },
+    {
+      "name": "jwt.token.expiration",
+      "type": "java.lang.Integer",
+      "sourceType": "com.illuminarean.example.config.properties.JwtTokenProperty",
+      "defaultValue": 60000
+    }
+  ],
+  "hints": []
+}

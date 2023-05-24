@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.illuminarean.example.user.api.UserControllerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-05-24T00:32:32" hostname="lswteenui-iMac.local" time="0.053">
+  <properties/>
+  <testcase name="내 정보 조회 성공 테스트 (토큰이 올바른 경우)" classname="com.illuminarean.example.user.api.UserControllerTest" time="0.043"/>
+  <testcase name="내 정보 조회 실패 테스트 (토큰이 올바르지 않을 경우)" classname="com.illuminarean.example.user.api.UserControllerTest" time="0.009"/>
+  <system-out><![CDATA[2023-05-24 09:32:32.667  INFO 4333 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.illuminarean.example.user.api.UserControllerTest], using SpringBootContextLoader
+2023-05-24 09:32:32.668  INFO 4333 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.illuminarean.example.user.api.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-24 09:32:32.668  INFO 4333 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.illuminarean.example.user.api.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-24 09:32:32.672  INFO 4333 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.illuminarean.example.IlluminreanBoardServiceApplication for test class com.illuminarean.example.user.api.UserControllerTest
+2023-05-24 09:32:32.673  INFO 4333 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-05-24 09:32:32.673  INFO 4333 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7f414b15, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c4250a4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@71395830, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3d89fde9, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@48e500ae, org.springframework.test.context.support.DirtiesContextTestExecutionListener@365cbe66, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d1f9845, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7f0b5aba, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1f8bd585, org.springframework.test.context.event.EventPublishingTestExecutionListener@4cf7e79c, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@3d5b83f7, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1820d06c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@59c61910, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2afedeb3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4b5bb420, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5566ae97, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3c0123b2]
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/users/me
+       Parameters = {}
+          Headers = [Accept:"application/json"]
+             Body = null
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=JdbcAuthenticationToken [Principal=com.illuminarean.example.security.JdbcAuthenticationPrincipal@ea8ba08, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]}
+
+Handler:
+             Type = com.illuminarean.example.user.api.UserController
+           Method = com.illuminarean.example.user.api.UserController#me()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":1,"email":"tester@gmail.com","name":"tester","loginCount":0,"lastLoginDate":"2023-05-24T09:32:32.540161","createDate":"2023-05-24T09:32:31.726243","modifiedDate":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/users/me
+       Parameters = {}
+          Headers = [Accept:"application/json", Authorization:"Bearer testasdfastoken"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = JWT strings must contain exactly 2 period characters. Found: 0
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
