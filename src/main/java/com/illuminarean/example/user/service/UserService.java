@@ -38,6 +38,7 @@ public class UserService {
         return userRepository.findByEmail(email).orElseThrow(() -> new NotFoundException("Could nof found user for " + email));
     }
 
+    @Transactional(readOnly = true)
     public UserDto findById(Long id) {
         checkNotNull(id, "id must be provided");
         return new UserDto(userRepository.findById(id).orElseThrow(() -> new NotFoundException("Could nof found user for " + id)));

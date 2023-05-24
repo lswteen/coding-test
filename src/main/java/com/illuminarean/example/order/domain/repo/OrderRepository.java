@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface OrderRepository{
-    Optional<List<Order>> findByOrderList(Order order);
+    Optional<List<Order>> findByOrderList(Long userId);
     Optional<Order> findByOrderDetail(Order order);
     boolean cancelOrder(Order order);
 }

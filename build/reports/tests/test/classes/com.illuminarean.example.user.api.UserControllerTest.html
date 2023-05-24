@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.163s</div>
+<div class="counter">0.071s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,13 +81,13 @@
 <tr>
 <td class="success">내 정보 조회 실패 테스트 (토큰이 올바르지 않을 경우)</td>
 <td class="success">meFailureTest()</td>
-<td class="success">0.027s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">내 정보 조회 성공 테스트 (토큰이 올바른 경우)</td>
 <td class="success">meSuccessTest()</td>
-<td class="success">0.136s</td>
+<td class="success">0.059s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -95,12 +95,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-05-24 13:58:03.442  INFO 38343 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.illuminarean.example.user.api.UserControllerTest], using SpringBootContextLoader
-2023-05-24 13:58:03.444  INFO 38343 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.illuminarean.example.user.api.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-05-24 13:58:03.445  INFO 38343 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.illuminarean.example.user.api.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-05-24 13:58:03.471  INFO 38343 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.illuminarean.example.IlluminreanBoardServiceApplication for test class com.illuminarean.example.user.api.UserControllerTest
-2023-05-24 13:58:03.480  INFO 38343 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-05-24 13:58:03.481  INFO 38343 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@a8451db, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@706809c0, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@36dc9a2a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@511e2c9c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@793cb5ed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@49aa8503, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1bf54bd6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3baffef8, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2720b7bd, org.springframework.test.context.event.EventPublishingTestExecutionListener@3abfacc7, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@ba5fbbd, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4fb98c0f, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6d06571a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2a1807e9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ec46904, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@d1e5527, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@527f7d19]
+<pre>2023-05-24 20:06:28.783  INFO 93476 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.illuminarean.example.user.api.UserControllerTest], using SpringBootContextLoader
+2023-05-24 20:06:28.784  INFO 93476 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.illuminarean.example.user.api.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-05-24 20:06:28.784  INFO 93476 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.illuminarean.example.user.api.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-24 20:06:28.799  INFO 93476 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.illuminarean.example.IlluminreanBoardServiceApplication for test class com.illuminarean.example.user.api.UserControllerTest
+2023-05-24 20:06:28.803  INFO 93476 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-05-24 20:06:28.804  INFO 93476 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57232e53, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3cf092ff, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3ff2d89e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@7fdda01b, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@31425805, org.springframework.test.context.support.DirtiesContextTestExecutionListener@99d53b8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@20025c3d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@32cdfd5e, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@116c0972, org.springframework.test.context.event.EventPublishingTestExecutionListener@720f9874, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@40dec1bc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1da4e3f4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6cf25eab, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6230a779, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@545559a2, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@6ed4bb9f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@102da7e8]
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -108,7 +108,7 @@ MockHttpServletRequest:
        Parameters = {}
           Headers = [Accept:&quot;application/json&quot;]
              Body = null
-    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=JdbcAuthenticationToken [Principal=com.illuminarean.example.security.JdbcAuthenticationPrincipal@1b180a1, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]}
+    Session Attrs = {SPRING_SECURITY_CONTEXT=SecurityContextImpl [Authentication=JdbcAuthenticationToken [Principal=com.illuminarean.example.security.JdbcAuthenticationPrincipal@1375da14, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]]}
 
 Handler:
              Type = com.illuminarean.example.user.api.UserController
@@ -134,7 +134,7 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:&quot;application/json&quot;]
      Content type = application/json
-             Body = {&quot;id&quot;:1,&quot;email&quot;:&quot;tester@gmail.com&quot;,&quot;name&quot;:&quot;tester&quot;,&quot;loginCount&quot;:0,&quot;lastLoginDate&quot;:&quot;2023-05-24T13:58:03.109308&quot;,&quot;createDate&quot;:&quot;2023-05-24T13:58:00.899262&quot;,&quot;modifiedDate&quot;:null}
+             Body = {&quot;id&quot;:1,&quot;email&quot;:&quot;tester@gmail.com&quot;,&quot;name&quot;:&quot;tester&quot;,&quot;loginCount&quot;:0,&quot;lastLoginDate&quot;:&quot;2023-05-24T20:06:28.554547&quot;,&quot;createDate&quot;:&quot;2023-05-24T20:06:27.818356&quot;,&quot;modifiedDate&quot;:null}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
@@ -186,7 +186,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at 2023. 5. 24. 오후 1:58:03</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 2023. 5. 24. 오후 8:06:29</p>
 </div>
 </div>
 </body>

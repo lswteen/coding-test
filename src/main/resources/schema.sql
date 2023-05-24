@@ -1,5 +1,7 @@
 DROP TABLE IF EXISTS `order` CASCADE;
 DROP TABLE IF EXISTS `review` CASCADE;
+DROP TABLE IF EXISTS `review_reply` CASCADE;
+DROP TABLE IF EXISTS `review_photo` CASCADE;
 DROP TABLE IF EXISTS `product` CASCADE;
 DROP TABLE IF EXISTS `user` CASCADE;
 
@@ -62,8 +64,6 @@ CREATE TABLE `review_photo`
     PRIMARY KEY (id),
     CONSTRAINT fk_review_photo_to_review FOREIGN KEY (review_id) REFERENCES review (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-
 
 
 CREATE TABLE `order`

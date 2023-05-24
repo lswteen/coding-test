@@ -61,11 +61,11 @@ public class JdbcOrderRepository implements OrderRepository {
     }
 
     @Override
-    public Optional<List<Order>> findByOrderList(Order order) {
+    public Optional<List<Order>> findByOrderList(Long userId) {
         List<Order> orders = jdbcTemplate.query(
                 "SELECT * FROM `order` WHERE user_id = ?",
                 mapper,
-                order.getUserId()
+                userId
         );
         return Optional.ofNullable(orders);
     }

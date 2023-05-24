@@ -15,6 +15,14 @@ VALUES (3, 'Product 3', 'test product 3', 0);
 INSERT INTO review(id, user_id, product_id, content, state, likes)
 VALUES (1, 1, 2, 'good!!!!','PUBLIC',1);
 
+-- Review_reply 데이터 생성
+INSERT INTO review_reply(id, review_id, user_id, content)
+VALUES (1, 1, 1, 'Thank you for your review!');
+
+-- Review_photo 데이터 생성
+INSERT INTO review_photo(id, review_id, photo_url)
+VALUES (1, 1, 'http://example.com/photo1.jpg');
+
 -- Order 데이터 생성
 INSERT INTO `order`(id, user_id, product_id, review_id, state, request_msg, reject_msg, complete_date, rejected_date)
 VALUES (null, 1, 1, null, 'REQUESTED', null, null, null, null);
