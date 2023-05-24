@@ -29,7 +29,7 @@ class OrderServiceTest {
     private OrderService orderService;
 
     @Test
-    @DisplayName("findByOrderList test")
+    @DisplayName("주문 정보 조회")
     void findByOrderList() {
         // Given
         Order order = new Order(); // Add necessary fields
@@ -45,7 +45,7 @@ class OrderServiceTest {
     }
 
     @Test
-    @DisplayName("findByOrderDetail test")
+    @DisplayName("주문 정보 상세")
     void findByOrderDetail() {
         // Given
         Order order = new Order(); // Add necessary fields
@@ -61,7 +61,7 @@ class OrderServiceTest {
 
 
     @Test
-    @DisplayName("findByOrderDetailToValue test")
+    @DisplayName("주문상세 Order Review 구조")
     void findByOrderDetailToValue() {
         // Given
         Review review = new Review.Builder()
@@ -99,7 +99,7 @@ class OrderServiceTest {
     }
 
     @Test
-    @DisplayName("findByOrderDetail not found test")
+    @DisplayName("주문 상세 데이터 없을경우")
     void findByOrderDetailNotFound() {
         // Given
         when(orderRepository.findByOrderDetail(anyLong()))
@@ -110,7 +110,7 @@ class OrderServiceTest {
     }
 
     @Test
-    @DisplayName("cancelOrder test")
+    @DisplayName("주문 취소 성공")
     void cancelOrder() {
         // Given
         when(orderRepository.cancelOrder(anyLong()))
@@ -124,7 +124,7 @@ class OrderServiceTest {
     }
 
     @Test
-    @DisplayName("cancelOrder failure test")
+    @DisplayName("주문 취소 실패")
     void cancelOrderFailure() {
         // Given
         when(orderRepository.cancelOrder(anyLong()))
