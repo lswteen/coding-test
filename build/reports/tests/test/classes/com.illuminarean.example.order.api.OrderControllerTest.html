@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - OrderControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>OrderControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.illuminarean.example.order.api.html">com.illuminarean.example.order.api</a> &gt; OrderControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.351s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">주문 정보 조회 테스트(토큰이 올바르지 않을 경우)</td>
+<td class="success">ordersFailureTest()</td>
+<td class="success">0.152s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">주문 정보 조회 테스트(토큰이 올바른 경우)</td>
+<td class="success">ordersTest()</td>
+<td class="success">0.199s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>20:06:20.748 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+20:06:20.759 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+20:06:20.817 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.illuminarean.example.order.api.OrderControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+20:06:20.879 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.illuminarean.example.order.api.OrderControllerTest], using SpringBootContextLoader
+20:06:20.885 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.illuminarean.example.order.api.OrderControllerTest]: class path resource [com/illuminarean/example/order/api/OrderControllerTest-context.xml] does not exist
+20:06:20.886 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.illuminarean.example.order.api.OrderControllerTest]: class path resource [com/illuminarean/example/order/api/OrderControllerTestContext.groovy] does not exist
+20:06:20.887 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.illuminarean.example.order.api.OrderControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+20:06:20.887 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.illuminarean.example.order.api.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:06:20.978 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.illuminarean.example.order.api.OrderControllerTest]
+20:06:21.079 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/lswteen/workspace/coding-test/build/classes/java/main/com/illuminarean/example/IlluminreanBoardServiceApplication.class]
+20:06:21.082 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.illuminarean.example.IlluminreanBoardServiceApplication for test class com.illuminarean.example.order.api.OrderControllerTest
+20:06:21.165 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.illuminarean.example.order.api.OrderControllerTest]: using defaults.
+20:06:21.165 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+20:06:21.215 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@502f1bbc, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@75867476, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3ee691c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@11ac2ac0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@397621b2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7f15c72e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@fc3e759, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7f49364b, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@77baf3a1, org.springframework.test.context.event.EventPublishingTestExecutionListener@264776cf, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@36aea471, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@633781, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2064ebd7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3d88101a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7e46b6f6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@67805980, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@60bd3cf4]
+20:06:21.223 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@f50377a testClass = OrderControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@13d9226a testClass = OrderControllerTest, locations = '{}', classes = '{class com.illuminarean.example.IlluminreanBoardServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@79618da2, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6cf46afb, [ImportsContextCustomizer@69deb807 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1627164e, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@18d156ee, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@de1aa67f, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5f157624, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@34b55322], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+20:06:21.301 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.3)
+
+2023-05-24 20:06:21.943  INFO 93476 --- [    Test worker] c.i.e.order.api.OrderControllerTest      : Starting OrderControllerTest using Java 11.0.12 on lswteenui-iMac.local with PID 93476 (started by lswteen in /Users/lswteen/workspace/coding-test)
+2023-05-24 20:06:21.948  INFO 93476 --- [    Test worker] c.i.e.order.api.OrderControllerTest      : No active profile set, falling back to default profiles: default
+2023-05-24 20:06:23.180  INFO 93476 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-05-24 20:06:23.219  INFO 93476 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.
+2023-05-24 20:06:24.620  INFO 93476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : H2_DB - Starting...
+2023-05-24 20:06:24.792  INFO 93476 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : H2_DB - Start completed.
+2023-05-24 20:06:25.766  INFO 93476 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:test_db'
+2023-05-24 20:06:26.352  INFO 93476 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@72a3596, org.springframework.security.web.context.SecurityContextPersistenceFilter@5bcee5d, org.springframework.security.web.authentication.logout.LogoutFilter@299c1604, com.illuminarean.example.security.JwtLoginFilter@2cfd0e3, com.illuminarean.example.security.JwtAuthenticationFilter@5b4ac769, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d08d408, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f986e37, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d839ff5, org.springframework.security.web.session.SessionManagementFilter@5389d8a7, org.springframework.security.web.access.ExceptionTranslationFilter@60dceb4f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76727aa2]
+2023-05-24 20:06:26.465  INFO 93476 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-24 20:06:26.465  INFO 93476 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-24 20:06:26.467  INFO 93476 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-05-24 20:06:26.494  INFO 93476 --- [    Test worker] c.i.e.order.api.OrderControllerTest      : Started OrderControllerTest in 5.185 seconds (JVM running for 6.952)
+io.jsonwebtoken.MalformedJwtException: JWT strings must contain exactly 2 period characters. Found: 0
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /api/orders/order
+       Parameters = {}
+          Headers = [Content-Type:&quot;application/json;charset=UTF-8&quot;, Authorization:&quot;Bearer testasdfastoken&quot;]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = null
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 401
+    Error message = JWT strings must contain exactly 2 period characters. Found: 0
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 2023. 5. 24. 오후 8:06:29</p>
+</div>
+</div>
+</body>
+</html>
