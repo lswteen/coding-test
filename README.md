@@ -115,5 +115,38 @@ Review 1-----------N Review Photo
 v
 Review Reply
 ```
+## 마일리지 
+주문후 구매완료 배송받은 상품에 리뷰를 텍스트 또는 이미지로 추가하게되면 
+마케팅 전략으로 상품에 퀄리티 보장과 마케팅을 함으로써 재구매율이 올라가게됩니다.
+
+텍스트보다 이미지가 재구매율을 높이는데 효과적인 정보를 제공하기때문에 텍스트 100원 이미지 350원 정도 제공하는방향으로
+실제 오픈마켓도 텍스트 이미지 리뷰 댓글에 차등해서 제공합니다.
+
+```text
+  ┌──────────┐    ┌──────────┐     ┌───────────┐    ┌───────────┐
+  │          │    │          │     │           │    │           │
+  │  USER    │    │  ORDER   │     │  REVIEW   │    │  MILEAGE  │
+  │          │    │          │     │           │    │           │
+  │  id      │◀──▶│user_id   │     │user_id    │◀──▶│user_id    │
+  │  name    │    │product_id│    │product_id │    │order_id   │◀──▶│order_id │
+  │  email   │    │review_id │◀──▶│id         │    │review_id  │
+  │  password│    │state     │    │content    │    │amount     │
+  │  login_  │    │request_  │    │state      │    │create_date│
+  │  count   │    │msg       │    │likes      │    └───────────┘
+  │  last_   │    │reject_   │    │create_date│
+  │  login_  │    │msg       │    └───────────┘
+  │  date    │    │complete_ │
+  │  create_ │    │date      │
+  │  date    │    │rejected_ │
+  │  modified│    │date      │
+  │  date    │    │create_date│
+  └──────────┘    └─────────┘
+
+```
+
+요구사항 테이블은 schema.sql에 추가 하였습니다.
+
+보통은 entity, DTO를 분리하는데 과제 요구사항에 맞춰진행하면서 별도 분리를 진행하진 않았습니다.
+JPA를 사용하게되면 Querydsl, 퍼시스던트 컨텍스트 트랜잭션 범위가 중요하기 때문에 필수지만 이번 개발에서는 간략화 하였습니다.
 
 
