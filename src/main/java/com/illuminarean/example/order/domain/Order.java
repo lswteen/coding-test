@@ -1,7 +1,7 @@
 package com.illuminarean.example.order.domain;
 
 import com.google.common.base.MoreObjects;
-import com.illuminarean.example.review.Review;
+import com.illuminarean.example.review.domain.Review;
 
 import java.time.LocalDateTime;
 import java.util.Objects;

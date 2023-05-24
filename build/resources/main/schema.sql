@@ -33,11 +33,38 @@ CREATE TABLE `review`
     `user_id`     bigint        NOT NULL,                --리뷰 작성자 PK (user 테이블 참조)
     `product_id`  bigint        NOT NULL,                --리뷰 상품 PK (product 테이블 참조)
     `content`     varchar(1000) NOT NULL,                --리뷰 내용
+    `state`       varchar(100)  DEFAULT 'PUBLIC' NOT NULL, --공개 여부 'PUBLIC','PRIVATE'
+    `likes`       bigint        DEFAULT 0 NOT NULL,      --좋아요 개수
     `create_date` datetime      NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     PRIMARY KEY (id),
     CONSTRAINT fk_review_to_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE RESTRICT ON UPDATE RESTRICT,
     CONSTRAINT fk_review_to_product FOREIGN KEY (product_id) REFERENCES product (id) ON DELETE RESTRICT ON UPDATE RESTRICT
 );
+
+CREATE TABLE `review_reply`
+(
+    `id`          bigint        NOT NULL AUTO_INCREMENT, --리뷰 답글 PK
+    `review_id`   bigint        NOT NULL,                --리뷰 PK (review 테이블 참조)
+    `user_id`     bigint        NOT NULL,                --답글 작성자 PK (user 테이블 참조)
+    `content`     varchar(1000) NOT NULL,                --답글 내용
+    `create_date` datetime      NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY (id),
+    CONSTRAINT fk_review_reply_to_review FOREIGN KEY (review_id) REFERENCES review (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_review_reply_to_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE `review_photo`
+(
+    `id`          bigint        NOT NULL AUTO_INCREMENT, --리뷰 사진 PK
+    `review_id`   bigint        NOT NULL,                --리뷰 PK (review 테이블 참조)
+    `photo_url`   varchar(1000) NOT NULL,                --사진 URL
+    `create_date` datetime      NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY (id),
+    CONSTRAINT fk_review_photo_to_review FOREIGN KEY (review_id) REFERENCES review (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
 
 CREATE TABLE `order`
 (

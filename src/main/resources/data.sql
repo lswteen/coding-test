@@ -12,8 +12,8 @@ INSERT INTO product(id, name, details, review_count)
 VALUES (3, 'Product 3', 'test product 3', 0);
 
 -- Review 데이터 생성
-INSERT INTO review(id, user_id, product_id, content)
-VALUES (1, 1, 2, 'good!!!!');
+INSERT INTO review(id, user_id, product_id, content, state, likes)
+VALUES (1, 1, 2, 'good!!!!','PUBLIC',1);
 
 -- Order 데이터 생성
 INSERT INTO `order`(id, user_id, product_id, review_id, state, request_msg, reject_msg, complete_date, rejected_date)

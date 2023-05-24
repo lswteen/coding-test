@@ -1,44 +1,32 @@
-package com.illuminarean.example.review;
+package com.illuminarean.example.review.domain;
 
 import com.google.common.base.MoreObjects;
-import com.illuminarean.example.order.domain.Order;
 
 import java.util.Date;
 import java.util.Objects;
 
-public class Review {
+public class ReviewReply {
 
     private Long id;
 
-    private Long userId;
+    private Long reviewId;
 
-    private Long productId;
+    private Long userId;
 
     private String content;
 
     private Date createDate;
 
-    public Review() {}
+    public ReviewReply() {}
 
-    private Review(Long userId, Long productId, String content) {
-        this(null, userId, productId, content, new Date());
+    private ReviewReply(Long reviewId, Long userId, String content) {
+        this(null, reviewId, userId, content, new Date());
     }
 
-    private Review(Long id, Long userId, Long productId, String content, Date createDate) {
+    private ReviewReply(Long id, Long reviewId, Long userId, String content, Date createDate) {
         this.id = id;
+        this.reviewId = reviewId;
         this.userId = userId;
-        this.productId = productId;
-        this.content = content;
-        this.createDate = createDate;
-    }
-
-    public Review(Order order, String content) {
-        this(order.getUserId(), order.getProductId(), content);
-    }
-
-    public Review(Long id, Long productId, String content, Date createDate) {
-        this.id = id;
-        this.productId = productId;
         this.content = content;
         this.createDate = createDate;
     }
@@ -47,12 +35,12 @@ public class Review {
         return id;
     }
 
-    public Long getUserId() {
-        return userId;
+    public Long getReviewId() {
+        return reviewId;
     }
 
-    public Long getProductId() {
-        return productId;
+    public Long getUserId() {
+        return userId;
     }
 
     public String getContent() {
@@ -67,8 +55,8 @@ public class Review {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Review review = (Review) o;
-        return Objects.equals(id, review.id);
+        ReviewReply that = (ReviewReply) o;
+        return Objects.equals(id, that.id);
     }
 
     @Override
@@ -80,20 +68,20 @@ public class Review {
     public String toString() {
         return MoreObjects.toStringHelper(this)
                 .add("id", id)
+                .add("reviewId", reviewId)
                 .add("userId", userId)
-                .add("productId", productId)
                 .add("content", content)
                 .add("createDate", createDate)
                 .toString();
     }
 
-    static public class Builder {
+    public static class Builder {
 
         private Long id;
 
-        private Long userId;
+        private Long reviewId;
 
-        private Long productId;
+        private Long userId;
 
         private String content;
 
@@ -107,13 +95,13 @@ public class Review {
             return this;
         }
 
-        public Builder userId(Long userId) {
-            this.userId = userId;
+        public Builder reviewId(Long reviewId) {
+            this.reviewId = reviewId;
             return this;
         }
 
-        public Builder productId(Long productId) {
-            this.productId = productId;
+        public Builder userId(Long userId) {
+            this.userId = userId;
             return this;
         }
 
@@ -127,11 +115,11 @@ public class Review {
             return this;
         }
 
-        public Review build() {
-            return new Review(
+        public ReviewReply build() {
+            return new ReviewReply(
                     this.id,
+                    this.reviewId,
                     this.userId,
-                    this.productId,
                     this.content,
                     this.createDate
             );
