@@ -17,7 +17,7 @@ public class JdbcOrderRepository implements OrderRepository {
     private final RowMapper<Order> mapper;
 
     //생성자에서 jdbcTemplate 을 접근하기 위해서 static사용하다보니
-    // 접근에 대한 문제로 인해서 해당 클레스 맴머필드로 변경해서 접근하게 mapper 변경
+    //접근에 대한 문제로 인해서 해당 클레스 맴버 필드로 변경해서 접근하게 mapper 변경
     public JdbcOrderRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
 

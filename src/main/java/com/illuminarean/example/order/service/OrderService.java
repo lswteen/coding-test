@@ -16,18 +16,16 @@ public class OrderService {
         this.orderRepository = orderRepository;
     }
 
-    //인증된 사용자가 주문목록을 조회한다.
     public List<Order> findByOrderList(Long userId){
         return orderRepository.findByOrderList(userId)
                 .orElse(Collections.emptyList());
     }
-    //인증된 사용자가 본인의 주문 상세 내용을 조회한다.
     public Order findByOrderDetail(Long orderId){
         return orderRepository.findByOrderDetail(orderId)
-                .orElseThrow(()-> new NotFoundException("Cloud nof found orderId for" + orderId));
+                .orElseThrow(()-> new NotFoundException("Cloud nof found order for" + orderId));
     }
 
-    //인증된 사용자가 본인의 주문을 취소한다. 주문상태 : 'SHIPPING', 'COMPLETED' 취소 불가
+    //주문상태 : 'SHIPPING', 'COMPLETED' 취소 불가
     public boolean cancelOrder(Long orderId){
         return orderRepository.cancelOrder(orderId);
     }
