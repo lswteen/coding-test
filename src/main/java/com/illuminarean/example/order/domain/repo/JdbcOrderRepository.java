@@ -71,20 +71,20 @@ public class JdbcOrderRepository implements OrderRepository {
     }
 
     @Override
-    public Optional<Order> findByOrderDetail(Order order) {
+    public Optional<Order> findByOrderDetail(Long orderId) {
         Order orderDetail = jdbcTemplate.queryForObject(
                 "SELECT * FROM `order` WHERE id = ?",
                 mapper,
-                order.getId()
+                orderId
         );
         return Optional.ofNullable(orderDetail);
     }
 
     @Override
-    public boolean cancelOrder(Order order) {
+    public boolean cancelOrder(Long orderId) {
         int rowsUpdated = jdbcTemplate.update(
                 "UPDATE `order` SET state = 'REJECTED' WHERE id = ? AND state NOT IN ('SHIPPING', 'COMPLETED')",
-                order.getId()
+                orderId
         );
 
         return rowsUpdated > 0;

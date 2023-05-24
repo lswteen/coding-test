@@ -10,14 +10,12 @@
     {
       "name": "jwt.token.client-secret",
       "type": "java.lang.String",
-      "sourceType": "com.illuminarean.example.config.properties.JwtTokenProperty",
-      "defaultValue": "secret"
+      "sourceType": "com.illuminarean.example.config.properties.JwtTokenProperty"
     },
     {
       "name": "jwt.token.expiration",
       "type": "java.lang.Integer",
-      "sourceType": "com.illuminarean.example.config.properties.JwtTokenProperty",
-      "defaultValue": 60000
+      "sourceType": "com.illuminarean.example.config.properties.JwtTokenProperty"
     }
   ],
   "hints": []
