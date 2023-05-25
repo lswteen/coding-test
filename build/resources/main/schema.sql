@@ -76,7 +76,6 @@ CREATE TABLE `mileage`
     `create_date` datetime      NOT NULL DEFAULT CURRENT_TIMESTAMP(),
     PRIMARY KEY (id),
     CONSTRAINT fk_mileage_to_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE ON UPDATE CASCADE,
-    CONSTRAINT fk_mileage_to_order FOREIGN KEY (order_id) REFERENCES orderid (id) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT fk_mileage_to_review FOREIGN KEY (review_id) REFERENCES review (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 

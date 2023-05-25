@@ -152,4 +152,8 @@ JPA를 사용하게되면 Querydsl, 퍼시스던트 컨텍스트 트랜잭션 �
 ## 프로젝트 개선안
 - jpa, Querydsl 를 이용해서 생산성을 높이는 방법
 - spring cloud api gateway 를 사용해서 인증 필터 추가 
--  
+- 공통 에러처리 new 생성되는부분 개선필요 
+- 확장성을 위한 멀티모듈 구성 필요
+- lombok 사용 검토
+- spring Doc 추가필요
+
