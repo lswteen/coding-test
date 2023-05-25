@@ -23,6 +23,10 @@ VALUES (1, 1, 1, 'Thank you for your review!');
 INSERT INTO review_photo(id, review_id, photo_url)
 VALUES (1, 1, 'http://example.com/photo1.jpg');
 
+-- 마일리지
+INSERT INTO mileage(user_id, order_id, review_id, amount)
+VALUES (1, 4, 1, 300);
+
 -- Order 데이터 생성
 INSERT INTO `order`(id, user_id, product_id, review_id, state, request_msg, reject_msg, complete_date, rejected_date)
 VALUES (null, 1, 1, null, 'REQUESTED', null, null, null, null);
@@ -38,4 +42,3 @@ INSERT INTO `order`(id, user_id, product_id, review_id, state, request_msg, reje
 VALUES (null, 1, 3, null, 'REJECTED', null, 'reject message', null, '2021-01-24 18:30:00');
 INSERT INTO `order`(id, user_id, product_id, review_id, state, request_msg, reject_msg, complete_date, rejected_date)
 VALUES (null, 1, 3, null, 'REQUESTED', null, null, null, null);
-

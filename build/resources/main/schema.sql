@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS `review_reply` CASCADE;
 DROP TABLE IF EXISTS `review_photo` CASCADE;
 DROP TABLE IF EXISTS `product` CASCADE;
 DROP TABLE IF EXISTS `user` CASCADE;
+DROP TABLE IF EXISTS `mileage` CASCADE;
 
 CREATE TABLE `user`
 (
@@ -64,6 +65,21 @@ CREATE TABLE `review_photo`
     PRIMARY KEY (id),
     CONSTRAINT fk_review_photo_to_review FOREIGN KEY (review_id) REFERENCES review (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+CREATE TABLE `mileage`
+(
+    `id`          bigint        NOT NULL AUTO_INCREMENT, -- 마일리지 PK
+    `user_id`     bigint        NOT NULL,                -- 마일리지 사용자 PK (user 테이블 참조)
+    `order_id`    bigint        NOT NULL,                -- 주문 PK (`order` 테이블 참조)
+    `review_id`   bigint        NOT NULL,                -- 리뷰 PK (review 테이블 참조)
+    `amount`      int           NOT NULL,                -- 마일리지 양 (100 또는 300)
+    `create_date` datetime      NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+    PRIMARY KEY (id),
+    CONSTRAINT fk_mileage_to_user FOREIGN KEY (user_id) REFERENCES user (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_mileage_to_order FOREIGN KEY (order_id) REFERENCES orderid (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_mileage_to_review FOREIGN KEY (review_id) REFERENCES review (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 
 
 CREATE TABLE `order`

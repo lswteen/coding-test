@@ -20,13 +20,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">17</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">17</div>
 <p>failures</p>
 </div>
 </td>
@@ -38,7 +38,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.062s</div>
+<div class="counter">0.016s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,8 +47,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -58,13 +58,89 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Packages</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Classes</a>
+<a href="#tab1">Packages</a>
+</li>
+<li>
+<a href="#tab2">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html">OrderControllerTest</a>.
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html#cancelOrderFailureTest()">주문 취소 테스트(토큰이 올바르지 않을 경우)</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html">OrderControllerTest</a>.
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html#cancelOrderTest()">주문 취소 테스트(토큰이 올바른 경우)</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html">OrderControllerTest</a>.
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html#getOrderDetailFailureTest()">주문 상세 조회 테스트(토큰이 올바르지 않을 경우)</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html">OrderControllerTest</a>.
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html#getOrderDetailTest()">주문 상세 조회 테스트(토큰이 올바른 경우)</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html">OrderControllerTest</a>.
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html#ordersFailureTest()">주문 정보 조회 테스트(토큰이 올바르지 않을 경우)</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html">OrderControllerTest</a>.
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html#ordersTest()">주문 정보 조회 테스트(토큰이 올바른 경우)</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html">OrderServiceTest</a>.
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html#cancelOrder()">주문 취소 성공</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html">OrderServiceTest</a>.
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html#cancelOrderFailure()">주문 취소 실패</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html">OrderServiceTest</a>.
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html#findByOrderDetail()">주문 정보 상세</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html">OrderServiceTest</a>.
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html#findByOrderDetailNotFound()">주문 상세 데이터 없을경우</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html">OrderServiceTest</a>.
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html#findByOrderDetailToValue()">주문상세 Order Review 구조</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html">OrderServiceTest</a>.
+<a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html#findByOrderList()">주문 정보 조회</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.security.LoginTest.html">LoginTest</a>.
+<a href="classes/com.illuminarean.example.security.LoginTest.html#loginFailureTestIllegalId()">로그인 실패 - 아이디가 올바르지 않은 경우</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.security.LoginTest.html">LoginTest</a>.
+<a href="classes/com.illuminarean.example.security.LoginTest.html#loginFailureTestIllegalPassword()">로그인 실패 - 비밀번호가 올바르지 않은 경우</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.security.LoginTest.html">LoginTest</a>.
+<a href="classes/com.illuminarean.example.security.LoginTest.html#loginSuccessTest()">로그인 성공 테스트</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.user.api.UserControllerTest.html">UserControllerTest</a>.
+<a href="classes/com.illuminarean.example.user.api.UserControllerTest.html#meFailureTest()">내 정보 조회 실패 테스트 (토큰이 올바르지 않을 경우)</a>
+</li>
+<li>
+<a href="classes/com.illuminarean.example.user.api.UserControllerTest.html">UserControllerTest</a>.
+<a href="classes/com.illuminarean.example.user.api.UserControllerTest.html#meSuccessTest()">내 정보 조회 성공 테스트 (토큰이 올바른 경우)</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -79,19 +155,49 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
+<td class="failures">
+<a href="packages/com.illuminarean.example.order.api.html">com.illuminarean.example.order.api</a>
+</td>
+<td>6</td>
+<td>6</td>
+<td>0</td>
+<td>0.006s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
 <a href="packages/com.illuminarean.example.order.service.html">com.illuminarean.example.order.service</a>
 </td>
-<td>1</td>
+<td>6</td>
+<td>6</td>
 <td>0</td>
+<td>0.005s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="packages/com.illuminarean.example.security.html">com.illuminarean.example.security</a>
+</td>
+<td>3</td>
+<td>3</td>
 <td>0</td>
-<td>0.062s</td>
-<td class="success">100%</td>
+<td>0.004s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="packages/com.illuminarean.example.user.api.html">com.illuminarean.example.user.api</a>
+</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="failures">0%</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -106,14 +212,44 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
+<td class="failures">
+<a href="classes/com.illuminarean.example.order.api.OrderControllerTest.html">com.illuminarean.example.order.api.OrderControllerTest</a>
+</td>
+<td>6</td>
+<td>6</td>
+<td>0</td>
+<td>0.006s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
 <a href="classes/com.illuminarean.example.order.service.OrderServiceTest.html">com.illuminarean.example.order.service.OrderServiceTest</a>
 </td>
-<td>1</td>
+<td>6</td>
+<td>6</td>
 <td>0</td>
+<td>0.005s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="classes/com.illuminarean.example.security.LoginTest.html">com.illuminarean.example.security.LoginTest</a>
+</td>
+<td>3</td>
+<td>3</td>
 <td>0</td>
-<td>0.062s</td>
-<td class="success">100%</td>
+<td>0.004s</td>
+<td class="failures">0%</td>
+</tr>
+<tr>
+<td class="failures">
+<a href="classes/com.illuminarean.example.user.api.UserControllerTest.html">com.illuminarean.example.user.api.UserControllerTest</a>
+</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0.001s</td>
+<td class="failures">0%</td>
 </tr>
 </tbody>
 </table>
@@ -126,7 +262,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1.1</a> at 2023. 5. 24. 오후 9:33:47</p>
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 2023. 5. 25. 오전 9:35:46</p>
 </div>
 </div>
 </body>
